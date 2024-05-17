@@ -15,7 +15,7 @@ window.onload = () => {
   document.querySelectorAll(".previous, .next").forEach(btn => btn.addEventListener("click", () => updatePreview(btn.classList.contains("previous") ? -1 : 1)));
   window.addEventListener("keydown", handleKeyPress);
 
-  // Initial setup
+  // Initial setup: simulate click on 'all' filter
   filterCategory.querySelector(".category[data-name='all']").click();
 };
 
@@ -26,13 +26,13 @@ function handleFilterClick(event) {
 
     updateFilteredItems(filterName);
     updateVisibility();
-    updatePreview(0); // Ensure currentIndex is adjusted based on visible items after filtering
+    currentIndex = 0; // Reset current index after filtering
   }
 }
 
 function handleItemClick() {
   if (!this.classList.contains("hide")) {
-    currentIndex = Array.from(filteredItems).indexOf(this);
+    currentIndex = filteredItems.indexOf(this);
     updatePreview(0);
     openPreview();
   }
@@ -61,12 +61,18 @@ function updateVisibility() {
 }
 
 function updatePreview(direction) {
+  if (filteredItems.length === 0) return; // Ensure there are items to preview
   currentIndex = (currentIndex + direction + filteredItems.length) % filteredItems.length;
   showContentAtIndex(currentIndex);
 }
 
 function showContentAtIndex(index) {
   previewContent.innerHTML = filteredItems[index].innerHTML;
+  const video = previewContent.querySelector("video");
+  if (video) {
+    video.muted = false;
+    video.play();
+  }
 }
 
 function openPreview() {
@@ -79,6 +85,11 @@ function openPreview() {
 closeIcon.onclick = shadow.onclick = closePreview;
 
 function closePreview() {
+  const video = previewContent.querySelector("video");
+  if (video) {
+    video.pause();
+    video.muted = true;
+  }
   previewBox.classList.remove("show");
   shadow.classList.remove("show");
   document.body.style.overflow = "auto";
