@@ -1,0 +1,101 @@
+.contact-container {
+    display: flex;
+    gap: 32px;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 64px;
+}
+
+form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+    gap: 16px;
+}
+
+.form-title {
+    display: inline-block;
+    text-align: left;
+}
+
+.wallpaper video {
+    height: 100%;
+    width: 100%;
+}
+
+input,
+textarea {
+    background: #1A1A1A;
+    padding: 16px;
+    border-style: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #999999;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid grey;
+}
+
+label {
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background: #333333;
+    border: solid 1px #333333;
+    color: #cccccc;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: black;
+    border: solid 1px white;
+    color: white;
+}
+
+.wallpaper {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1260px) {
+    .contact-container {
+        width: 100%;
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .contact-container {
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .wallpaper {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .contact-container {
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+}
