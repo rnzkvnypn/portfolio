@@ -547,6 +547,10 @@ footer {
 }
 
 @media screen and (max-width: 740px) {
+    nav a img {
+        width: 128px;
+    }
+
     div.nav-links>*:last-child {
         display: flex;
     }
