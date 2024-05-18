@@ -322,7 +322,6 @@ main.works {
     margin: 0 auto;
     overflow-x: hidden;
     width: 100%;
-    max-height: auto;
     margin-bottom: 64px;
 }
 
@@ -335,12 +334,11 @@ main.works {
     align-items: center;
     justify-content: center;
     background: #333333;
-    border-radius: 4px;
     cursor: pointer;
     -webkit-aspect-ratio: 1/1; /* Safari */
     aspect-ratio: 1/1;
     object-fit: cover;
-    overflow: hidden;
+    border-radius: 4px;
 }
 
 .works div img,
@@ -352,6 +350,8 @@ main.works {
     -webkit-aspect-ratio: 1/1; /* Safari */
     aspect-ratio: 1/1;
     min-width: 200px;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 .works div img:hover,
