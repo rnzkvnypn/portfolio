@@ -548,6 +548,12 @@ footer {
     background: #004182;
 }
 
+@-moz-document url-prefix() {
+    .works {
+        display: -moz-grid; /* For Firefox */
+    }
+}
+
 @media screen and (max-width: 1280px) {
     div.nav-links>*:last-child {
         display: none;
