@@ -306,6 +306,7 @@ main {
 
 main.works {
     max-width: 1280px;
+    max-height: 664px;
 }
 
 .works {
@@ -319,7 +320,6 @@ main.works {
     align-items: center;
     gap: 8px;
     margin: 0 auto;
-    max-height: 664px;
     overflow-x: hidden;
     width: 100%;
     max-height: auto;
@@ -546,12 +546,6 @@ footer {
 
 .social-link:hover:nth-child(4) {
     background: #004182;
-}
-
-@-moz-document url-prefix() {
-    .works {
-        display: -moz-grid; /* For Firefox */
-    }
 }
 
 @media screen and (max-width: 1280px) {
