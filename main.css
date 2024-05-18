@@ -309,15 +309,20 @@ main.works {
 }
 
 .works {
+    display: -ms-grid; /* For IE 10 */
     display: grid;
+    -ms-grid-columns: 1fr; /* For IE 10 */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    -webkit-justify-content: center; /* Safari */
     justify-content: center;
+    -webkit-align-items: center; /* Safari */
     align-items: center;
     gap: 8px;
     margin: 0 auto;
     max-height: 664px;
     overflow-x: hidden;
     width: 100%;
+    max-height: auto;
     margin-bottom: 64px;
 }
 
@@ -332,23 +337,26 @@ main.works {
     background: #333333;
     border-radius: 4px;
     cursor: pointer;
+    -webkit-aspect-ratio: 1/1; /* Safari */
     aspect-ratio: 1/1;
+    object-fit: cover;
     overflow: hidden;
 }
 
 .works div img,
 .works div video {
-    scale: 1.1;
     object-fit: cover;
     min-height: 100%;
     min-width: 100%;
-    transition: all 0.1s ease-in-out;
-    overflow: hidden;
+    transition: transform 0.1s ease-in-out;
+    -webkit-aspect-ratio: 1/1; /* Safari */
+    aspect-ratio: 1/1;
+    min-width: 200px;
 }
 
 .works div img:hover,
 .works div video:hover {
-    scale: 1;
+    transform: scale(1);
 }
 
 .work.hide {
