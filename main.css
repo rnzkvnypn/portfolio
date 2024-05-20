@@ -305,11 +305,12 @@ main {
 }
 
 main.works {
-    max-width: 1280px;
-    max-height: 664px;
 }
 
 .works {
+    max-width: 1280px;
+    max-height: 664px;
+    overflow: auto;
     display: -ms-grid; /* For IE 10 */
     display: grid;
     -ms-grid-columns: 1fr; /* For IE 10 */
