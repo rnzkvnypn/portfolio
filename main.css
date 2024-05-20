@@ -320,7 +320,6 @@ main.works {
     align-items: center;
     gap: 8px;
     margin: 0 auto;
-    overflow-y: scroll;
     width: 100%;
     margin-bottom: 64px;
 }
@@ -329,7 +328,7 @@ main.works {
     display: none;
 }
 
-.works div {
+.works .work {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,8 +341,8 @@ main.works {
     overflow: clip;
 }
 
-.works div img,
-.works div video {
+.works .work img,
+.works .work video {
     object-fit: cover;
     min-height: 100%;
     min-width: 100%;
