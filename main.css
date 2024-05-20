@@ -339,7 +339,7 @@ main.works {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .works div img,
@@ -352,7 +352,6 @@ main.works {
     -webkit-aspect-ratio: 1/1; /* Safari */
     aspect-ratio: 1/1;
     min-width: 200px;
-    overflow: hidden;
     border-radius: 4px;
 }
 
