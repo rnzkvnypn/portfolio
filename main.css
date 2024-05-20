@@ -321,6 +321,7 @@ main.works {
     align-items: center;
     gap: 8px;
     margin: 0 auto;
+    overflow-x: hidden;
     width: 100%;
     margin-bottom: 64px;
 }
@@ -339,7 +340,7 @@ main.works {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .works div img,
