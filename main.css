@@ -305,9 +305,6 @@ main {
 }
 
 main.works {
-    max-width: 1280px;
-    max-height: 664px;
-    overflow-y: scroll;
 }
 
 .works {
@@ -324,6 +321,9 @@ main.works {
     overflow-x: hidden;
     width: 100%;
     margin-bottom: 64px;
+    max-width: 1280px;
+    max-height: 664px;
+    overflow-y: scroll;
 }
 
 .works::-webkit-scrollbar {
