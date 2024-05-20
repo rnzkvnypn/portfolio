@@ -307,7 +307,8 @@ main {
 main.works {
     max-width: 1280px;
     max-height: 664px;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .works {
