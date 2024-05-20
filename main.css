@@ -320,7 +320,6 @@ main.works {
     align-items: center;
     gap: 8px;
     margin: 0 auto;
-    overflow-x: hidden;
     width: 100%;
     margin-bottom: 64px;
 }
