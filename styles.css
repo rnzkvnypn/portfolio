@@ -298,6 +298,7 @@ section>div {
     padding: 4px 8px;
     border-radius: 16px;
     cursor: pointer;
+    white-space: nowrap;
     transition: all .1s ease-in-out;
 }
 
