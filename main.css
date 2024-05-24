@@ -474,6 +474,8 @@ main.works {
     max-width: 100vw; /* Ensure the image doesn't exceed its natural size */
     max-height: 100vh;
     pointer-events: auto;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .shadow {
