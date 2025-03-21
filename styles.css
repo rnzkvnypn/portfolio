@@ -127,7 +127,7 @@ section>div {
 }
 
 .profile-picture {
-    background: url("images/profile.png");
+    background: url("images/.png");
     width: 120px;
     height: 120px;
     position: absolute;
